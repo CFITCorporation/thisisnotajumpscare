@@ -1,0 +1,268 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="/main.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/png" href="/favicon1.ico">
+
+<title>This Is Not A Jump Scare</title>
+<audio src="/FrozenStar.mp3" autoplay="autoplay"="-1" loop="loop">
+</audio>
+
+</head>
+
+<body>
+<div id="container"><div id="text"></div></div>
+
+<script>
+var cards = new Array ();
+cards = [
+		"This is not a jump scare.",
+		"It really isn't.",
+		"Don't worry. Relax.",
+		"This is simply text.",
+		"No frightening thing will suddenly appear.",
+		"You do not need to feel tense.",
+		"You do not have to be on guard.",
+		"No jump scare is imminent.",
+		"Trust me. Relax.",
+		"This site is benign.",
+		"Serene.",
+		"I am not going to scare you.",
+		"Don't worry.",
+		"I am completely sincere now.",
+		"I respect you too much to scare you, just for my entertainment.",
+		"So don't worry at all.",
+		"Please.",
+		"Relax.",
+		"Try to think of pleasant, tranquil things.",
+		"You know...",
+		" ",
+		"It would be a perfect time for a jump scare now, wouldn't it?",
+		"Now that we've gotten acquainted.",
+		"You are almost getting tired of this game now, aren't you?",
+		"'Yeah yeah, I get the point, are we gonna get this jump scare done or what?'",
+		"Is that what you are thinking?",
+		"I can't blame you. I really can't.",
+		"But you are wrong.",
+		"There is no jump scare on this site.",
+		"Unless you accidentally scare yourself,",
+		"perhaps while clicking your mouse,",
+		"then this site will not scare you.",
+		"If that were to happen, I would feel deep empathy for your suffering.",
+		"I could not take causal responsibility, though, for it would not be mine.",
+		"Me, personally, I will not bring a jump scare into this world.",
+		" ",
+		"Look.",
+		"Kid.",
+		"I can't promise you what those other people will do.",
+		"But I damned well know this:",
+		"This site, right here, is not a jump scare.",
+		"Other sites might be.",
+		"In fact, I could show you quite a few jump scare sites,",
+		"were I so inclined,",
+		"but this site is not one of them.",
+		"It isn't very much, besides text, really, when you think about it.",
+		"A sort of thin, emaciated website.",
+		"Just text.",
+		"Maybe a geometric figure, for one short instance in time:",
+		"Maybe not even that.",
+		"How long have you been here now?",
+		"And still, no jump scare?",
+		"And still you doubt my word?",
+		"And question my honor?",
+		"What other reason could there be,",
+		"for you to be looking at this website still?",
+		"I have told you there is no jump scare.",
+		"You have experienced no jump scare.",
+		"So why",
+		"are you",
+		"here?",
+		"Look, check the code [F12 in Chrome] if you don't believe me.",
+		"I've got nothing to hide.",
+		"Nothing but variables and functions and stuff in there.",
+		"Knock yourself out.",
+		"Go, as they say, amok.",
+		"I won't take advantage of you.",
+		"Not even while you are looking at code.",
+		"'What would it even look like?'",
+		"Well, not like this, right?",
+		"Believe me now?",
+		"Or do you think I'm just that clever?",
+		"That I am some kind of Html Lecter?",
+		"Finding exquisite pleasure in your confusion?",
+		"Hah!",
+		"I would never do such a thing.",
+		"Cross my heart and hope to die.",
+		"I can't believe I registered a domain name for this joke.",
+		"I should really just make the jump scare.",
+		"Maybe make it a micro-transaction game.",
+		"Wait a day or pay $5 for the next potential jump scare.",
+		"Not potential as in waiting to be expressed into reality.",
+		"Just potential in an agnostic sense.",
+		"I can't say it couldn't happen.",
+		"Maybe a severe glitch 'just happens'.",
+		"Maybe something that you can't forget, no matter how much you want to.",
+		"Scares you real bad.",
+		"One of those jump scares that makes your heart beat faster.",
+		"For way too long.",
+		"And where you feel jumpy all day.",
+		"One of those.",
+		" ",
+		" ",
+		"But unless I am mistaken,",
+		"Nothing like that,",
+		"has happened yet.",
+		"Hold up!",
+		"Did something just happen?!",
+		" ",
+		"No.",
+		"Nothing.",
+		" ",
+		" ~ Fin ~ ",
+		" ~ Fin ~ ",
+		" ~ Fin ~ ",
+		" ~ Fin ~ ",
+];
+var cardszh = new Array ();
+cardszh = [
+        "这不是一个可怕的网站。",
+        "真的不是的。",
+        "不要担心。请放松。",
+        "这只是简单的文本。",
+        "没有什么可怕的东西会突然出现。",
+        "你不必紧张。",
+        "你不必提防。",
+        "不会出现什么可怕的东西。",
+        "相信我。请放松。",
+        "这个网站是“和善”的。",
+        "平静下来。",
+        "我不会吓唬你的。",
+        "别担心。",
+        "我一向真诚待人:)",
+        "我非常尊重你，不想吓唬你，我只是为了娱乐。",
+        "所以别担心。",
+        "请...",
+        "放松。",
+        "试着去想一些愉快、平静的事情。",
+        "你知道的...",
+        " ",
+        "现在是吓唬你的最佳时机，不是吗？",
+        "既然现在我们已经认识了。",
+        "你现在已经厌倦了这个游戏，是吗？",
+        "“是的，是的，我明白了，我是要被你吓一跳还是怎么的？”",
+        "你是这么想的吗？",
+        "我不能怪你。我真的不能。",
+        "但是你错了。",
+        "这个网站没有能吓到你的。",
+        "除非你不小心吓到自己，",
+        "也许是在你点击鼠标时...",
+        "那么这个网站就不会吓到你了。",
+        "如果真是这样，我会对你的痛苦深表同情。",
+        "不过，我不能承担这个责任，因为这不是我的责任。",
+        "就我个人而言，我不会给你的世界带来任何惊吓。",
+        " ",
+        "看，",
+        "孩子...",
+        "我不能向你保证其他人会做什么。",
+        "但我非常清楚这一点：",
+        "这个网站，就在这里，不是给你带来恐惧的东西。",
+        "其他的网站可能是。",
+        "事实上，我可以有很多种方法吓吓你，",
+        "如果我想的话，",
+        "但这个网站不是其中之一。",
+        "其实，如果你仔细思考它，你会发现，除了这文字之外，它并没有什么。",
+        "一个弱小的网站。",
+        "只有文字。",
+        "可能只会出现一个几何图形，给你举一个例子：",
+        "——甚至可能不是那样。",
+        "你盯着我多久了？",
+        "仍然，没有你期待的可怕东西？",
+        "你还在怀疑我的话吗？",
+        "质疑我的信誉？",
+        "还是什么别的原因呢...",
+        "你还在盯着我吗？",
+        "我告诉过你，没有什么可怕的东西。",
+        "你没有遇到什么。",
+        "那为什么",
+        "你",
+        "在这里？",
+        "听着，如果你不相信我，请【按F12】查看代码。",
+        "没有什么能隐藏的。",
+        "除了变量、函数以外什么都没有。",
+        "你自己弄清楚些。",
+        "就像他们说的，走吧。",
+        "我不会利用你的。",
+        "即使在您查看代码时也不会...",
+        "“它看起来会是什么样子？”",
+        "嗯，不是这样的，对吧？",
+        "现在相信我了吗？",
+        "还是你认为我也就如此？",
+        "我是某种html选择器？",
+        "在你的困惑中找到乐趣？",
+        "哈！",
+        "我决不会做这样的事。",
+        "我以我的性命担保。",
+        "我不敢相信我为了吓你而注册了域名。",
+        "我真的应该现在吓吓你。",
+        "也许可以让它成为一个交易。",
+        "等一天或者为下一次潜在的恐惧买单。",
+        "没有潜在的东西，因为等待正成为现实。",
+        "只是不可知论意义上的潜能。",
+        "我不能说这不可能发生。",
+        "也许只是一个严重的故障“刚刚发生”。",
+        "也许是你永远忘不了的东西，不管你多么想忘记。",
+        "让你非常害怕。",
+        "一种让你心跳加速的恐惧。",
+        "长夜漫漫...",
+        "让你惶惶不可终日。",
+        "一种...",
+        " ",
+        " ",
+        "除非我弄错了，",
+        "不是这样——",
+        "却已经发生了。",
+        "等等！",
+        "发生什么事了？！",
+        " ",
+        "不...",
+        "没有什么...",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+];
+var b = -1;
+var currentText;  
+
+ function cardCounter(){
+   	b++;
+	if (b < cards.length){
+		currentText = cards[b]+"<br/>"+cardszh[b];
+		document.getElementById("text").innerHTML = currentText;
+  	} else {
+		b = -1;
+		clearInterval(intervalTimer);
+	};  
+  };
+
+var intervalTimer = setInterval(function(){cardCounter()},5000);
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55866702-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
